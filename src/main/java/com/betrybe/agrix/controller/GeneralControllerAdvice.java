@@ -4,6 +4,7 @@ import com.betrybe.agrix.service.exception.CropNotFoundException;
 import com.betrybe.agrix.service.exception.FarmNotFoundException;
 import com.betrybe.agrix.service.exception.FertilizerNotFoundException;
 import com.betrybe.agrix.service.exception.PersonNotFoundException;
+import com.betrybe.agrix.service.exception.UsernameNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -18,7 +19,8 @@ public class GeneralControllerAdvice {
       FarmNotFoundException.class,
       FertilizerNotFoundException.class,
       CropNotFoundException.class,
-      PersonNotFoundException.class
+      PersonNotFoundException.class,
+      UsernameNotFoundException.class
   })
 
   public ResponseEntity<String> handlerNotFound(RuntimeException e) {
